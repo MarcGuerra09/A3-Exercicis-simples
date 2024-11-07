@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- El archivo se declara como un archivo XML de versión 1.0 con codificación UTF-8. -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XML usando el espacio de nombres "xs" para los elementos del esquema XML. -->
 
     <xs:element name="persona">
+    <!-- El elemento raíz del XML será <persona>. -->
+
         <xs:complexType>
+        <!-- El elemento <persona> es de tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+
             <xs:sequence>
+            <!-- Los elementos dentro de <persona> deben seguir un orden específico. -->
+
                 <xs:element name="nombre" type="xs:string"/>
+                <!-- El elemento <nombre> representa el nombre de la persona y debe ser una cadena de texto (xs:string). -->
+
                 <xs:element name="mujer" type="xs:string"/>
+                <!-- El elemento <mujer> representa el género de la persona y debe ser una cadena de texto (xs:string). 
+                     Esto parece ser una respuesta de "sí" o "no" o un campo textual relacionado con el género. -->
+
                 <xs:element name="fecha_de_nacimiento">
+                <!-- El elemento <fecha_de_nacimiento> representa la fecha de nacimiento de la persona. -->
+
                     <xs:complexType>
+                    <!-- Este campo también es de tipo complejo, con varios subelementos dentro. -->
+                    
                         <xs:sequence>
+                        <!-- Los elementos dentro de <fecha_de_nacimiento> deben seguir un orden específico. -->
+                        
                             <xs:element name="dia" type="xs:integer"/>
+                            <!-- El elemento <dia> representa el día del nacimiento de la persona y debe ser un valor entero (xs:integer). -->
+
                             <xs:element name="mes" type="xs:integer"/>
+                            <!-- El elemento <mes> representa el mes del nacimiento de la persona y debe ser un valor entero (xs:integer). -->
+
                             <xs:element name="anyo" type="xs:integer"/>
+                            <!-- El elemento <anyo> representa el año del nacimiento de la persona y debe ser un valor entero (xs:integer). -->
+
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <xs:element name="ciudad" type="xs:string"/>
+                <!-- El elemento <ciudad> representa la ciudad de residencia de la persona y debe ser una cadena de texto (xs:string). -->
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>

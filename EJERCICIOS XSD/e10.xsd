@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
+
     <xs:element name="fichas">
+    <!-- Define el elemento raíz llamado <fichas>, que contendrá múltiples fichas. -->
+    
         <xs:complexType>
+        <!-- El elemento <fichas> tiene un tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+        
             <xs:sequence>
+            <!-- Los elementos dentro de <fichas> deben seguir un orden específico. -->
+
                 <xs:element name="ficha" maxOccurs="unbounded">
+                <!-- Define un elemento <ficha>, que puede repetirse un número ilimitado de veces (maxOccurs="unbounded"). -->
+                
                     <xs:complexType>
+                    <!-- Cada elemento <ficha> tiene un tipo complejo, es decir, contiene otros elementos dentro de él. -->
+
                         <xs:sequence>
+                        <!-- Los elementos dentro de <ficha> deben seguir un orden específico. -->
+
                             <xs:element name="nombre" type="xs:string"/>
+                            <!-- El elemento <nombre> debe ser de tipo cadena de texto (xs:string). Representa el nombre de la persona en la ficha. -->
+
                             <xs:element name="edad" type="xs:integer"/>
+                            <!-- El elemento <edad> debe ser de tipo entero (xs:integer). Representa la edad de la persona en la ficha. -->
+
                         </xs:sequence>
+
                         <xs:attribute name="id" type="xs:integer" use="required"/>
+                        <!-- El atributo "id" es de tipo entero (xs:integer) y es obligatorio ("use='required'"). Representa un identificador único para cada ficha. -->
+
                         <xs:attribute name="xsiNamespace" type="xs:string"/>
+                        <!-- El atributo "xsiNamespace" es de tipo cadena (xs:string), pero no es obligatorio, y puede ser utilizado para especificar un espacio de nombres XML. -->
+
                     </xs:complexType>
                 </xs:element>
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
 </xs:schema>

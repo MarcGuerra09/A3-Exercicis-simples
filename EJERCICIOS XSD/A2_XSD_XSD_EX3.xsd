@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
 
   <xs:element name="nota">
+    <!-- Define un elemento raíz llamado <nota> que será validado. -->
+    
     <xs:complexType>
+      <!-- El elemento <nota> tiene un tipo complejo, es decir, contiene otros elementos dentro de él. -->
+      
       <xs:sequence>
+        <!-- Los elementos dentro de <nota> deben seguir un orden específico. -->
+        
         <xs:element name="para" type="xs:string"/>
+        <!-- El elemento <para> debe ser de tipo cadena de texto (xs:string), y representa al destinatario de la nota. -->
+        
         <xs:element name="de" type="xs:string"/>
+        <!-- El elemento <de> debe ser de tipo cadena de texto (xs:string), y representa al remitente de la nota. -->
+        
         <xs:element name="asunto" type="xs:string"/>
+        <!-- El elemento <asunto> debe ser de tipo cadena de texto (xs:string), y representa el asunto de la nota. -->
+        
         <xs:element name="cuerpo" type="xs:string"/>
+        <!-- El elemento <cuerpo> debe ser de tipo cadena de texto (xs:string), y contiene el contenido del mensaje de la nota. -->
+        
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
 </xs:schema>
+

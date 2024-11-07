@@ -3,12 +3,14 @@
 
 <head>
   <style>
+    /* Define bordes para la tabla, las celdas de encabezado (th) y las celdas (td) */
     table,
     th,
     td {
       border: 1px solid black;
     }
 
+    /* Añade padding y alinea el texto a la izquierda en th y td */
     th,
     td {
       padding: 5px;
@@ -20,38 +22,48 @@
 <body>
 
   <h2>HTML Table</h2>
+  <!-- Título de la sección -->
 
+  <!-- Primera tabla -->
   <table>
     <tr>
       <th>Name</th>
       <th colspan="2">Telephone</th>
+      <!-- Usa colspan para que la columna "Telephone" ocupe dos columnas -->
     </tr>
     <tr>
       <td>Bill Gates</td>
       <td>555 77 854</td>
       <td>555 77 855</td>
+      <!-- Cada número de teléfono en una columna separada -->
     </tr>
-
   </table>
 
   <br>
+  <!-- Salto de línea para separar tablas -->
 
+  <!-- Segunda tabla -->
   <table>
     <tr>
       <th>First Name:</th>
       <td>Bill Gates</td>
+      <!-- Una fila con el nombre completo -->
     </tr>
     <tr>
       <th rowspan="2">Telephone:</th>
+      <!-- Usa rowspan para que el encabezado "Telephone" abarque dos filas -->
       <td>555 77 854</td>
     </tr>
     <tr>
       <td>555 77 855</td>
+      <!-- Segunda fila para otro número de teléfono -->
     </tr>
   </table>
 
   <br>
+  <!-- Salto de línea para separar tablas -->
 
+  <!-- Tercera tabla con celdas combinadas -->
   <table>
     <tr>
       <td>First</td>
@@ -59,6 +71,7 @@
       <td>First</td>
       <td>Row</td>
       <td rowspan="2">&</td>
+      <!-- Usa rowspan para combinar estas dos celdas en filas -->
       <td rowspan="2">&</td>
     </tr>
     <tr>
@@ -66,6 +79,7 @@
       <td>Row</td>
       <td>Second</td>
       <td>Row</td>
+      <!-- Segunda fila que coincide con las primeras celdas, sin cambiar las celdas combinadas -->
     </tr>
   </table>
 

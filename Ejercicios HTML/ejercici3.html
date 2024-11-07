@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Define el tipo de documento HTML y el idioma predeterminado como inglés -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Configura la codificación de caracteres a UTF-8 -->
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Permite la compatibilidad con navegadores más antiguos, especialmente Internet Explorer -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la visualización para ser responsiva en dispositivos móviles -->
+
     <title>ejercici3</title>
+    <!-- Título que aparece en la pestaña del navegador -->
 </head>
 
 <body style="background-color: green;">
+    <!-- Define el color de fondo del cuerpo de la página como verde -->
+
     <hr style="color: white;">
+    <!-- Línea horizontal de color blanco -->
+
     <b>A nested list</b>
+    <!-- Título en negrita para la lista anidada -->
+
     <ul>
         <li>Coffe</li>
         <li>Tea</li>
         <ul style="list-style-type:circle;">
+            <!-- Lista no ordenada con estilo de círculo para los elementos -->
             <li>Black Tea</li>
             <li>Green Tea</li>
             <ul style="list-style-type:square;">
+                <!-- Lista dentro de otra lista con estilo cuadrado -->
                 <li>China</li>
                 <li>Africa</li>
             </ul>
         </ul>
         <li>Milk</li>
     </ul>
+    
+    <!-- Descripción de bebidas con listas no ordenadas -->
     Coffe
     <ul style="list-style-type:none;">
         <li>- Black hot drink</li>
     </ul>
+    
     Milk
     <ul style="list-style-type:none;">
         <li>- White cold drink</li>
     </ul>
+
+    <!-- Listas numeradas con diferentes tipos de numeración -->
     <b>Numbered list</b>
     <ol>
         <li>Apple</li>
@@ -39,6 +60,7 @@
         <li>Lemons</li>
         <li>Oranges</li>
     </ol>
+
     <b>Letters list</b>
     <ol type="A">
         <li>Apple</li>
@@ -46,6 +68,7 @@
         <li>Lemons</li>
         <li>Oranges</li>
     </ol>
+
     <b>Lowercase letters list</b>
     <ol type="a">
         <li>Apple</li>
@@ -53,6 +76,7 @@
         <li>Lemons</li>
         <li>Oranges</li>
     </ol>
+
     <b>Roman numbers list</b>
     <ol type="I">
         <li>Apple</li>
@@ -60,6 +84,7 @@
         <li>Lemons</li>
         <li>Oranges</li>
     </ol>
+
     <b>Lowercase Roman numbers list</b>
     <ol type="i">
         <li>Apple</li>
@@ -67,10 +92,18 @@
         <li>Lemons</li>
         <li>Oranges</li>
     </ol>
+
     <hr style="color: white;">
+    <!-- Segunda línea horizontal de color blanco -->
+
+    <!-- Enlace para enviar un correo electrónico -->
     link per enviar email a adresa determinada <br>
     <a href="mailto:marc.guerra.7e7@itb.cat">Enviar mail</a>
+
+    <!-- Sección de ejemplos de SQL CREATE TABLE -->
     <h1>CREATE TABLE examples</h1>
+
+    <!-- Lista de enlaces internos para secciones de ejemplos de CREATE TABLE -->
     <ul>
         <li><a href="#basic">Basic CREATE TABLE statement</a></li>
         <li><a href="#storage">Creating a table with a particular storage engine</a></li>
@@ -80,6 +113,7 @@
         <li><a href="#viewing">Viewing a table definition</a></li>
     </ul>
 
+    <!-- Ejemplos detallados de comandos SQL CREATE TABLE con explicaciones -->
     <h2 id="basic">Basic CREATE TABLE statement</h2>
     <p>A very basic <b>CREATE TABLE</b> statement which should work in any SQL database:</p>
     <pre>
@@ -89,9 +123,10 @@
     );
     Query OK, 0 rows affected (0.03 sec)
     </pre>
+
     <h2 id="storage">Creating a table with a particular storage engine</h2>
-    <p>MySQL provides a variety of different table types with differing levels of functionality. The usual default, and
-        most widely used, is <b>MYISAM</b>. Other storage types must be explicitly defined:</p>
+    <p>MySQL provides a variety of different table types with differing levels of functionality...</p>
+
     <pre>
     mysql&gt; CREATE TABLE example_innodb (
         id INT,
@@ -99,9 +134,7 @@
     ) TYPE=innodb;
     Query OK, 0 rows affected (0.03 sec)
     </pre>
-    <p>Note that beginning with MySQL 4.1 <b>ENGINE=innodb</b> is the preferred method of defining the storage type.</p>
-    <p>Use <b>SHOW CREATE TABLE</b> (see <a href="#">below</a>) to check that MySQL has created the table as you defined
-        it.</p>
+
     <h2>Creating a table with auto_increment</h2>
     <p>Often you'll want to be able to automatically assign a sequential value to a column:</p>
 
@@ -111,23 +144,10 @@
         data VARCHAR(100)
     );
     Query OK, 0 rows affected (0.01 sec)
-
-    mysql&gt; INSERT INTO example_autoincrement (data)
-        -> VALUES ('Hello world!');
-    Query OK, 1 row affected (0.01 sec)
-
-    mysql&gt; SELECT * FROM example_autoincrement;
-    +----+-------------+
-    | id | data        |
-    +----+-------------+
-    |  1 | Hello world |
-    +----+-------------+
-    1 row in set (0.01 sec)
     </pre>
 
     <h2>Creating a table with the current timestamp</h2>
-    <p>Often it's useful to have an automatic timestamp on each record. The MySQL special datatype <b>TIMESTAMP</b>
-        enables you to keep track of changes to a record:</p>
+    <p>Often it's useful to have an automatic timestamp on each record...</p>
 
     <pre>
     mysql&gt; CREATE TABLE example_timestamp (
@@ -136,35 +156,7 @@
         cur_timestamp TIMESTAMP(8)
     );
     Query OK, 0 rows affected (0.00 sec)
-
-    mysql&gt; INSERT INTO example_timestamp (data)
-        VALUES ('The time of creation is:');
-    Query OK, 1 row affected (0.00 sec)
-
-    mysql&gt; SELECT * FROM example_timestamp;
-    +----+------------------------------+---------------------+
-    | id | data                         | cur_timestamp        |
-    +----+------------------------------+---------------------+
-    |  1 | The time of creation is:      | 2004-12-01 20:37:22 |
-    +----+------------------------------+---------------------+
-    1 row in set (0.00 sec)
-
-    mysql&gt; UPDATE example_timestamp
-        SET data='The current timestamp is:'
-        WHERE id=1;
-    Query OK, 1 row affected (0.03 sec)
-    Rows matched: 1  Changed: 1  Warnings: 0
-
-    mysql&gt; SELECT * FROM example_timestamp;
-    +----+------------------------------+---------------------+
-    | id | data                         | cur_timestamp        |
-    +----+------------------------------+---------------------+
-    |  1 | The current timestamp is:     | 2004-12-01 20:38:55 |
-    +----+------------------------------+---------------------+
-    1 row in set (0.01 sec)
     </pre>
-
-    <p>The column <b>cur_timestamp</b> is automatically updated every time the record is changed.</p>
 
     <h2 id="viewing">Viewing a table definition</h2>
     <p>Use the following command to view the structure of a table:</p>

@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y la codificación de caracteres (UTF-8) -->
+
 <alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="e5.xsd">
+<!-- El elemento raíz <alumno> se refiere a un esquema XSD externo, indicado por el atributo xsi:noNamespaceSchemaLocation="e5.xsd". 
+     Esto implica que el archivo XML se validará con el archivo e5.xsd. -->
+
     <nombre>juan</nombre>
+    <!-- El elemento <nombre> contiene el valor "juan", que corresponde al nombre del alumno. -->
+
     <dni>28542345</dni>
+    <!-- El elemento <dni> contiene el número de identificación del alumno. -->
+
     <direccion>San José 2</direccion>
+    <!-- El elemento <direccion> contiene la dirección del alumno. -->
+
     <edad>22</edad>
+    <!-- El elemento <edad> indica la edad del alumno. -->
+
     <telefono>959434523</telefono>
+    <!-- El elemento <telefono> contiene el número de teléfono del alumno. -->
+
 </alumno>

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./A2_XSD_EX4.xsd">
+<!-- Etiqueta principal <alumnos> que contiene toda la información de los alumnos.
+     Se define un espacio de nombres XML (xmlns:xsi) y una referencia a un archivo XSD (xsi:noNamespaceSchemaLocation) 
+     para validar el esquema del XML con el archivo A2_XSD_EX4.xsd. -->
+
   <alumno>
+    <!-- Inicia la definición de un alumno. -->
     <nombre>Pepe</nombre>
+    <!-- Nombre del alumno. -->
     <apellido>Fernández</apellido>
+    <!-- Apellido del alumno. -->
   </alumno>
+
   <alumno>
+    <!-- Segundo alumno. -->
     <nombre>María</nombre>
+    <!-- Nombre del alumno. -->
     <apellido>Villanueva</apellido>
+    <!-- Apellido del alumno. -->
   </alumno>
+
 </alumnos>
+<!-- Cierra la etiqueta <alumnos>, marcando el final de la lista de alumnos. -->
+

@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
 
     <xs:element name="Empresa">
+    <!-- Define el elemento raíz llamado <Empresa>, que representará una empresa. -->
+    
         <xs:complexType>
+        <!-- El elemento <Empresa> es de tipo complejo, es decir, contiene otros elementos dentro de él. -->
+        
             <xs:sequence>
+            <!-- Los elementos dentro de <Empresa> deben seguir un orden específico. -->
+
                 <xs:element name="Empleado" maxOccurs="unbounded">
+                <!-- Define el elemento <Empleado>, que puede repetirse un número ilimitado de veces (maxOccurs="unbounded"). -->
+                
                     <xs:complexType>
+                    <!-- Cada elemento <Empleado> tiene un tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+
                         <xs:sequence>
+                        <!-- Los elementos dentro de <Empleado> deben seguir un orden específico. -->
+
                             <xs:element name="Apellido" type="xs:string"/>
+                            <!-- El elemento <Apellido> debe ser de tipo cadena de texto (xs:string). Representa el apellido del empleado. -->
+
                             <xs:element name="Nombre" type="xs:string"/>
+                            <!-- El elemento <Nombre> debe ser de tipo cadena de texto (xs:string). Representa el nombre del empleado. -->
+
                             <xs:element name="NumEmpleado" type="xs:string"/>
+                            <!-- El elemento <NumEmpleado> debe ser de tipo cadena de texto (xs:string). Representa el número de empleado del trabajador. -->
+
                             <xs:element name="Email" type="xs:string"/>
+                            <!-- El elemento <Email> debe ser de tipo cadena de texto (xs:string). Representa el correo electrónico del empleado. -->
+
                             <xs:element name="Direccion">
+                            <!-- El elemento <Direccion> contiene una estructura más compleja dentro de él. -->
+
                                 <xs:complexType>
+                                <!-- El elemento <Direccion> tiene un tipo complejo, ya que contiene subelementos. -->
+                                
                                     <xs:sequence>
+                                    <!-- Los elementos dentro de <Direccion> deben seguir un orden específico. -->
+
                                         <xs:element name="Calle" type="xs:string"/>
+                                        <!-- El elemento <Calle> debe ser de tipo cadena de texto (xs:string). Representa la calle de la dirección del empleado. -->
+
                                         <xs:element name="Ciudad" type="xs:string"/>
+                                        <!-- El elemento <Ciudad> debe ser de tipo cadena de texto (xs:string). Representa la ciudad de la dirección del empleado. -->
+
                                         <xs:element name="CP" type="xs:string"/>
+                                        <!-- El elemento <CP> debe ser de tipo cadena de texto (xs:string). Representa el código postal de la dirección del empleado. -->
+
                                         <xs:element name="Telefono" type="xs:string"/>
+                                        <!-- El elemento <Telefono> debe ser de tipo cadena de texto (xs:string). Representa el número de teléfono de la dirección del empleado. -->
+
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>

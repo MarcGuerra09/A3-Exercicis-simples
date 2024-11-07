@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
 
   <xs:element name="alumno">
+  <!-- Define un elemento llamado <alumno>, que representa un alumno en el XML. -->
+  
     <xs:complexType>
+    <!-- El elemento <alumno> es de tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+    
       <xs:sequence>
+      <!-- Los elementos dentro de <alumno> deben seguir un orden específico. -->
+
         <xs:element name="nombre" type="xs:string"/>
+        <!-- El elemento <nombre> es de tipo cadena (xs:string), y representa el nombre del alumno. -->
+
         <xs:element name="dni" type="xs:string"/>
+        <!-- El elemento <dni> es de tipo cadena (xs:string), y representa el número de identificación del alumno. -->
+
         <xs:element name="direccion" type="xs:string"/>
+        <!-- El elemento <direccion> es de tipo cadena (xs:string), y representa la dirección del alumno. -->
+
         <xs:element name="edad" type="xs:integer"/>
+        <!-- El elemento <edad> es de tipo entero (xs:integer), y representa la edad del alumno. -->
+
         <xs:element name="telefono" type="xs:string"/>
+        <!-- El elemento <telefono> es de tipo cadena (xs:string), y representa el número de teléfono del alumno. -->
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
 </xs:schema>
+

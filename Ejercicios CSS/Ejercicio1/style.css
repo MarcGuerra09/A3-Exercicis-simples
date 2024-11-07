@@ -1,26 +1,38 @@
 body {
   background-color: yellow;
+  /* Define el color de fondo de la página en amarillo */
+  
   font-family: Arial, sans-serif;
+  /* Aplica la fuente Arial para todo el contenido, con respaldo sans-serif */
 }
 
 h1 {
   color: orange;
+  /* Establece el color del texto en los encabezados <h1> como naranja */
+  
   text-align: center;
+  /* Centra el texto en los encabezados <h1> */
 }
 
 ul {
   list-style-type: disc;
+  /* Aplica el estilo de viñeta en forma de disco (punto sólido) a las listas no ordenadas (<ul>) */
 }
 
 ul ul {
   list-style-type: circle;
+  /* Aplica el estilo de viñeta en forma de círculo (punto hueco) a las listas anidadas dentro de otra lista */
 }
 
 a {
   color: purple;
+  /* Cambia el color de los enlaces a morado */
+  
   text-decoration: underline;
+  /* Subraya el texto de los enlaces */
 }
 
 a:hover {
   color: red;
+  /* Cambia el color de los enlaces a rojo al pasar el cursor sobre ellos */
 }

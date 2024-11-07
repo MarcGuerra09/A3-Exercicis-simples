@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="ca">
+<!-- Define el tipo de documento HTML y establece el idioma como catalán -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la visualización para dispositivos móviles -->
+
     <title>Mostra d'enllaços</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
     <style>
+        /* Estilos para el fondo y la fuente del cuerpo */
         body {
             background-color: #F5EED4;
+            /* Color de fondo beige claro */
             font-family: Arial, sans-serif;
+            /* Fuente Arial, con respaldo en sans-serif */
         }
 
+        /* Estilos para las imágenes */
         img {
             width: 300px;
+            /* Ancho de imagen de 300px, ajustable */
             height: auto;
+            /* Altura proporcional al ancho */
         }
 
+        /* Estilos para los enlaces */
         a {
             text-decoration: none;
+            /* Elimina el subrayado de los enlaces */
             color: #0000EE;
+            /* Color de enlace azul */
         }
 
+        /* Estilos al pasar el cursor sobre el enlace */
         a:hover {
             color: red;
+            /* Cambia el color del enlace a rojo al pasar el cursor */
         }
     </style>
 </head>
@@ -30,20 +48,31 @@
 <body>
 
     <h1 id="top" style="background-color: yellow;">Mostra d'enllaços</h1>
+    <!-- Título principal con fondo amarillo y un id para el ancla de navegación -->
 
+    <!-- Enlaces externos que abren en una nueva pestaña -->
     <a href="https://www.upc.edu" target="_blank">Acces a la UPC</a><br>
     <a href="https://www.google.com" target="_blank">Acces a Google a una pestanya nova</a><br>
+
+    <!-- Enlace interno que lleva al final de la página -->
     <a href="#final">Ves al final de la pàgina</a><br>
-    <br>
-    <br>
-    <img src="https://i.etsystatic.com/38615118/r/il/b599e9/5431775946/il_794xN.5431775946_pstq.jpg"
-        alt="Imatge del calendari">
+
+    <br><br>
+    <!-- Espacios para separación visual -->
+
+    <!-- Imagen con descripción en el atributo alt -->
+    <img src="https://i.etsystatic.com/38615118/r/il/b599e9/5431775946/il_794xN.5431775946_pstq.jpg" alt="Imatge del calendari">
 
     <p>Imatge amb <b>enllaç:</b></p>
+    <!-- Descripción en negrita para la segunda imagen -->
+
+    <!-- Segunda imagen con atributo alt -->
     <img src="https://images.desenio.com/zoom/17156_1.jpg" alt="Wow!">
 
     <h2 id="final">Final de la pàgina</h2>
+    <!-- Subtítulo que marca el final de la página, con un id para el ancla -->
 
+    <!-- Enlace que lleva al inicio de la página -->
     <a href="#top">Torna a l'inici de la pàgina</a>
 
 </body>

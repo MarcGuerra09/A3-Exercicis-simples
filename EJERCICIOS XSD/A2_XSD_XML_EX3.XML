@@ -1,9 +1,23 @@
 <?xml version="1.0"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) (aunque no se especifica en este caso, se asume por defecto) -->
+
 <nota xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./A2_XSD_XSD_EX3.xsd">
-  
+<!-- El elemento raíz <nota> define la estructura del mensaje. 
+     Se incluye el espacio de nombres XML (xmlns:xsi) y se hace referencia a un archivo de esquema XSD (xsi:noNamespaceSchemaLocation), 
+     lo que indica que este XML debe ser validado con el archivo A2_XSD_XSD_EX3.xsd. -->
+
   <para>Antonio</para>
+  <!-- Elemento <para> especifica el destinatario de la nota (Antonio). -->
+
   <de>Juan</de>
+  <!-- Elemento <de> especifica el remitente de la nota (Juan). -->
+
   <asunto>Recuerdo</asunto>
+  <!-- Elemento <asunto> define el asunto de la nota (Recuerdo). -->
+
   <cuerpo>¡No me olvides!</cuerpo>
-  
+  <!-- Elemento <cuerpo> contiene el contenido o mensaje de la nota (¡No me olvides!). -->
+
 </nota>
+<!-- Cierra la etiqueta <nota>, marcando el final del contenido del mensaje. -->
+

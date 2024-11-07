@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
 
     <xs:element name="libro">
+    <!-- Define el elemento raíz <libro>, que representa un libro en el archivo XML. -->
+
         <xs:complexType>
+        <!-- El elemento <libro> es de tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+        
             <xs:sequence>
+            <!-- Los elementos dentro de <libro> deben seguir un orden específico. -->
+            
                 <xs:element name="titulo" type="xs:string"/>
+                <!-- El elemento <titulo> es de tipo cadena (xs:string), y representa el título del libro. -->
+
                 <xs:element name="autor" type="xs:string"/>
+                <!-- El elemento <autor> es de tipo cadena (xs:string), y representa el autor del libro. -->
+
                 <xs:element name="fecha_publicacion" type="xs:date"/>
+                <!-- El elemento <fecha_publicacion> es de tipo fecha (xs:date), y representa la fecha de publicación del libro. -->
+
                 <xs:element name="hora_publicacion" type="xs:time"/>
+                <!-- El elemento <hora_publicacion> es de tipo hora (xs:time), y representa la hora de publicación del libro. -->
+
                 <xs:element name="isbn" type="xs:string"/>
+                <!-- El elemento <isbn> es de tipo cadena (xs:string), y representa el código ISBN del libro. -->
+
                 <xs:element name="editorial" type="xs:string"/>
+                <!-- El elemento <editorial> es de tipo cadena (xs:string), y representa la editorial del libro. -->
+
                 <xs:element name="tapa_dura" type="xs:boolean"/>
+                <!-- El elemento <tapa_dura> es de tipo booleano (xs:boolean), y representa si el libro tiene tapa dura (true/false). -->
+
                 <xs:element name="peso" type="xs:decimal"/>
+                <!-- El elemento <peso> es de tipo decimal (xs:decimal), y representa el peso del libro en unidades de peso (por ejemplo, kg). -->
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>

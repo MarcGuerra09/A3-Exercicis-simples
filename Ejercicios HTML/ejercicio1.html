@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Define el tipo de documento HTML y el idioma del contenido (inglés) -->
 
 <head>
-  <meta charset=" UTF-8">
+  <meta charset="UTF-8">
+  <!-- Establece la codificación de caracteres en UTF-8 -->
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Asegura compatibilidad con Internet Explorer en el modo de renderizado más reciente -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Define la escala de visualización en dispositivos móviles -->
+
   <title>Document</title>
+  <!-- Título de la página que aparece en la pestaña del navegador -->
+
   <style>
+    /* Estilos globales */
     html {
       height: 100%;
       width: 100%;
     }
 
+    /* Estilos del cuerpo de la página */
     body {
       margin-top: 5%;
       margin-left: 30%;
@@ -20,49 +31,83 @@
       padding: 0;
     }
 
+    /* Estilos para el encabezado (header) */
     header {
       background-color: #1E90FF;
+      /* Fondo azul */
       color: black;
+      /* Texto en negro */
       padding: 30px;
       text-align: corner;
+      /* ERROR: 'corner' no es un valor válido para 'text-align' (podría ser 'center', 'left', 'right') */
       font-size: 70px;
+      /* Tamaño de fuente grande */
     }
 
+    /* Estilos para el contenido principal (main) */
     main {
       background-color: #00FFFF;
+      /* Fondo color cian */
       color: black;
+      /* Texto en negro */
       float: left;
+      /* Alineación flotante hacia la izquierda */
       width: 66%;
+      /* Ocupa el 66% del ancho */
       padding: 60px;
+      /* Espaciado interno de 60px */
       box-sizing: border-box;
+      /* Incluye el relleno en el cálculo del ancho */
       font-size: 70px;
-
+      /* Tamaño de fuente grande */
     }
 
+    /* Estilos para la barra lateral (aside) */
     aside {
       background-color: #98FB98;
+      /* Fondo verde claro */
       color: black;
+      /* Texto en negro */
       float: right;
+      /* Alineación flotante hacia la derecha */
       width: 34%;
+      /* Ocupa el 34% del ancho */
       padding: 60px;
+      /* Espaciado interno de 60px */
       box-sizing: border-box;
+      /* Incluye el relleno en el cálculo del ancho */
       font-size: 70px;
+      /* Tamaño de fuente grande */
     }
 
+    /* Estilos para el pie de página (footer) */
     footer {
       background-color: #2ec27e;
+      /* Fondo color verde */
       padding: 20px;
+      /* Espaciado interno de 20px */
       text-align: corner;
+      /* ERROR: 'corner' no es válido en 'text-align' (debe ser 'center', 'left', 'right') */
       font-size: 70px;
+      /* Tamaño de fuente grande */
     }
   </style>
 </head>
 
 <body>
+  <!-- Cuerpo de la página -->
+  
   <header>Header</header>
+  <!-- Encabezado de la página -->
+
   <main>Main</main>
+  <!-- Contenido principal -->
+
   <aside>Aside</aside>
+  <!-- Contenido de la barra lateral -->
+
   <footer>Footer</footer>
+  <!-- Pie de página -->
 </body>
 
 </html>

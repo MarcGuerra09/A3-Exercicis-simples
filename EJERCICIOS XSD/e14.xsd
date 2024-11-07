@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Define el esquema XSD utilizando el espacio de nombres "xs" para los elementos del esquema XML. -->
+
   <xs:attributeGroup name="personaAttributes">
+  <!-- Define un grupo de atributos llamado "personaAttributes", pero no contiene atributos en este caso. -->
   </xs:attributeGroup>
+
   <xs:element name="alumnos">
+  <!-- Define el elemento raíz llamado <alumnos>, que contiene una lista de elementos <alumno>. -->
+  
     <xs:complexType>
+    <!-- El elemento <alumnos> es de tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+    
       <xs:sequence>
+      <!-- Los elementos dentro de <alumnos> deben seguir un orden específico. -->
+
         <xs:element name="alumno" maxOccurs="unbounded">
+        <!-- Define el elemento <alumno>, que puede repetirse un número ilimitado de veces (maxOccurs="unbounded"). -->
+        
           <xs:complexType>
+          <!-- Cada elemento <alumno> tiene un tipo complejo, lo que significa que contiene otros elementos dentro de él. -->
+
             <xs:sequence>
+            <!-- Los elementos dentro de <alumno> deben seguir un orden específico. -->
+              
               <xs:element name="nombre" type="xs:string"/>
+              <!-- El elemento <nombre> debe ser de tipo cadena de texto (xs:string). Representa el nombre del alumno. -->
+
               <xs:element name="apellido" type="xs:string"/>
+              <!-- El elemento <apellido> debe ser de tipo cadena de texto (xs:string). Representa el apellido del alumno. -->
+
             </xs:sequence>
+
             <xs:attributeGroup ref="personaAttributes"/>
+            <!-- El elemento <alumno> hace referencia al grupo de atributos "personaAttributes", pero en este caso no tiene atributos definidos. -->
+          
           </xs:complexType>
         </xs:element>
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -1,30 +1,44 @@
 body {
   font-family: Verdana, sans-serif;
+  /* Define la fuente global de la página como Verdana, con respaldo en sans-serif */
+  
   font-size: 20px;
+  /* Tamaño de fuente de 20px para todo el texto */
 }
 
 .aqua {
   background-color: aqua;
+  /* Color de fondo azul claro para los elementos con la clase "aqua" */
+  
   padding: 10px;
+  /* Espaciado interno de 10px alrededor del contenido */
 }
 
 .silver {
   background-color: silver;
+  /* Color de fondo plateado para los elementos con la clase "silver" */
+  
   padding: 10px;
+  /* Espaciado interno de 10px alrededor del contenido */
 }
 
 .center {
   text-align: center;
+  /* Alinea el texto al centro dentro del elemento */
 }
 
 .right {
   text-align: right;
+  /* Alinea el texto a la derecha dentro del elemento */
 }
 
 .blue {
   color: blue;
+  /* Aplica color azul al texto */
 }
 
 .red {
   color: red;
+  /* Aplica color rojo al texto */
 }
+

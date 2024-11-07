@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de la versión XML y el tipo de codificación de caracteres (UTF-8) -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Definición de un esquema XML (XSD) que usa el espacio de nombres "xs" para los elementos del esquema. -->
 
   <xs:element name="alumnos">
+    <!-- Se define un elemento raíz llamado <alumnos>. -->
+
     <xs:complexType>
+      <!-- El elemento <alumnos> tiene un tipo complejo, es decir, contiene otros elementos. -->
+      
       <xs:sequence>
+        <!-- Los elementos dentro de <alumnos> deben seguir un orden específico. -->
+
         <xs:element name="alumno" maxOccurs="unbounded">
+          <!-- Se define el elemento <alumno>, que puede repetirse un número ilimitado de veces (maxOccurs="unbounded"). -->
+          
           <xs:complexType>
+            <!-- El elemento <alumno> es complejo, lo que significa que tiene más elementos dentro. -->
+            
             <xs:sequence>
+              <!-- Los elementos dentro de <alumno> deben seguir un orden específico. -->
+
               <xs:element name="nombre" type="xs:string"/>
+              <!-- El elemento <nombre> debe ser de tipo cadena de texto (xs:string). -->
+
               <xs:element name="apellido" type="xs:string"/>
+              <!-- El elemento <apellido> también debe ser de tipo cadena de texto (xs:string). -->
+
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>

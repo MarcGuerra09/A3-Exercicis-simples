@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <matricula>
+    <!-- Elemento raíz <matricula> que engloba toda la información de la matrícula. -->
+
     <ciclo></ciclo>
+    <!-- El elemento <ciclo> representa el ciclo educativo al que pertenece la matrícula. 
+         Actualmente está vacío, pero en un archivo real tendría el nombre o tipo de ciclo. -->
+
     <alumnos>
+    <!-- El elemento <alumnos> es un contenedor para los datos de los alumnos. -->
+    
         <alumno>
+        <!-- El elemento <alumno> representa a un alumno en particular dentro de <alumnos>. -->
+
             <nombre></nombre>
+            <!-- El elemento <nombre> está destinado a contener el nombre del alumno. -->
+
             <year></year>
+            <!-- El elemento <year> representa el año académico en el que el alumno está matriculado. 
+                 En este caso está vacío. -->
+
             <asignaturas>
+            <!-- El elemento <asignaturas> es un contenedor para las asignaturas que cursa el alumno. -->
+            
                 <asignatura></asignatura>
+                <!-- El elemento <asignatura> está destinado a contener el nombre de una asignatura que el alumno cursa. -->
             </asignaturas>
         </alumno>
     </alumnos>
